@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='images/logo.png') }}">
+    <title>QUIZ</title>
+</head>
+<body>
+    <header>
+        <h3>{{ username }}</h3>
+    </header>
+    <main>
+        <button id="pressButton">ГОЛОСОВАТЬ</button>
+        <script>
+            document.getElementById('pressButton').addEventListener('click', function() {
+                const timePressed = Date.now();
+                console.log("Миллисекунды:", timePressed); 
+
+                let today = new Date();
+                let milliseconds = today.getMilliseconds();
+
+                console.log(milliseconds); 
+                fetch('/log_time', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ time_pressed: timePressed, milisek: milliseconds }),
+                })
+                .then(response => response.text())
+                .then(data => {
+                    console.log("Ответ сервера:", data);
+                })
+                .catch((error) => {
+                    console.error('Ошибка:', error);
+                });
+            });
+        </script>
+        
+    </main>
+</body>
+</html>

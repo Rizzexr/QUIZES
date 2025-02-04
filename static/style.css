@@ -1,0 +1,228 @@
+html{
+    height: 100vh; 
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    background: #111823;
+}
+body{
+    height: 100vh; 
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+
+    background: url(back.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: #1D1616; */
+}
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(background.jpeg) no-repeat center/cover;
+    opacity: 0.05; /* 5% видимости */
+    z-index: -1;
+}   
+header{
+    width: 100%;
+    height: 15vh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    background: #BA3A46;
+
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+
+    box-shadow: 0vh 4vh 10vh rgba(0, 0, 0, 0.5);
+}
+h1{
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vh;
+}
+h3{
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 5vh;
+}
+main{
+    width: 100%;
+    height: 83vh;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#registration-form{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#reload{
+    background: #D84040;
+    outline: none;
+    border: none;
+
+    width: 60%;
+    height: 7vh;
+
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6vh;
+    transition: width 1s;
+}
+#clickButton{
+    background: #D84040;
+    outline: none;
+    border: none;
+
+    width: 60%;
+    height: 7vh;
+
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6vh;
+    transition: width 1s;
+}
+#clickButton:active {
+    animation: hideAndShow 5s forwards;
+}
+
+@keyframes hideAndShow {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    99% {
+        opacity: 0;
+        visibility: hidden;
+    }
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+#login{
+    background: rgba(0, 0, 0, 0.3);
+    outline: none;
+    border: none;
+
+    width: 60%;
+    height: 7vh;
+
+    color: #EEEEEE;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.6vh;
+    text-align: center;
+    font-weight: 700
+}
+#time-list{
+    color: #eeeeee;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 4vh;
+    font-size: 3vh;
+    font-weight: bold;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+#inputer{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    height: 8vh;
+    background: #0A0E15;
+    outline: none;
+    border: none;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    border: 0.6vh solid #FF4654;
+    /* border-bottom: none; */
+    box-sizing: border-box;
+    font-weight: bold;
+    color: #9D9FA1;
+    transition: box-shadow 1s;
+}
+#inputer:focus{
+    background: #141c2a;
+    box-shadow: 0vh 0vh 10vh rgba(255, 70, 84, 0.5);
+}
+#inputer:active{
+    background: #141c2a;
+    box-shadow: 0vh 0vh 10vh rgba(255, 70, 84, 0.5);
+}
+#login{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    height: 8vh;
+    background: #FF4654;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: #fff;
+    outline: none;
+    border: none;
+}
+#pressButton{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    height: 30vh;
+    background: #FF4654;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0vh 0vh 10vh rgba(255, 70, 84, 0.7);
+    font-size: 4vh;
+    font-weight: bold;
+}
+#clear{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+    height: 8vh;
+    background: #FF4654;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3vh;
+    color: #fff;
+    outline: none;
+    border: none;
+    box-shadow: 0vh 0vh 10vh rgba(255, 70, 84, 0.7);
+    font-size: 4vh;
+    font-weight: bold;
+    margin-top: 4vh;
+}
